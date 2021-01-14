@@ -8,13 +8,12 @@ import androidx.room.PrimaryKey;
 import androidx.room.TypeConverters;
 
 import org.mousehole.americanairline.recitationrevised.model.data.converters.DateConverters;
-import org.mousehole.americanairline.recitationrevised.model.data.converters.StringListConverter;
 
 import java.util.Date;
 import java.util.List;
 
 @Entity(indices = @Index(value = {"week", "day"}, name = "week_day_index"), tableName = "homework")
-public class HomeWorkDetails {
+public class HomeworkDetails {
 
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "homework_id")
@@ -33,8 +32,7 @@ public class HomeWorkDetails {
     private String description;
 
     @ColumnInfo(name = "concepts")
-    @TypeConverters(value = {StringListConverter.class})
-    private List<String> concepts;
+    private String concepts;
 
     @ColumnInfo(name = "git_repository")
     private String gitRepository;
@@ -43,7 +41,7 @@ public class HomeWorkDetails {
     @TypeConverters(value = {DateConverters.class})
     private Date dueDate;
 
-    public HomeWorkDetails(long id, int week, int day, String subject, String description, List<String> concepts, String gitRepository, Date dueDate) {
+    public HomeworkDetails(long id, int week, int day, String subject, String description, String concepts, String gitRepository, Date dueDate) {
         this.id = id;
         this.week = week;
         this.day = day;
@@ -55,7 +53,7 @@ public class HomeWorkDetails {
     }
 
     @Ignore
-    public HomeWorkDetails(int week, int day, String subject, String description, List<String> concepts, String gitRepository, Date dueDate) {
+    public HomeworkDetails(int week, int day, String subject, String description, String concepts, String gitRepository, Date dueDate) {
         this.week = week;
         this.day = day;
         this.subject = subject;
@@ -101,11 +99,11 @@ public class HomeWorkDetails {
         this.description = description;
     }
 
-    public List<String> getConcepts() {
+    public String getConcepts() {
         return concepts;
     }
 
-    public void setConcepts(List<String> concepts) {
+    public void setConcepts(String concepts) {
         this.concepts = concepts;
     }
 

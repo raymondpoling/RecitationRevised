@@ -7,7 +7,7 @@ import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "task")
-@ForeignKey(entity = HomeWorkDetails.class, parentColumns = {"homework_id"}, childColumns = {"homework_key"})
+@ForeignKey(entity = HomeworkDetails.class, parentColumns = {"homework_id"}, childColumns = {"homework_key"})
 public class Task {
 
     @PrimaryKey(autoGenerate = true)

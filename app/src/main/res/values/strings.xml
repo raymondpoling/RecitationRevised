@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Recitation Revised</string>
+    <string name="github_url">GitHub URL</string>
+    <string name="last_updated">Last Updated</string>
+    <string name="add_new_homework">Add New Homework</string>
+    <string name="week">Week</string>
+    <string name="day">Day</string>
+    <string name="subject">Subject</string>
+    <string name="comma_seperated_concepts">Comma Seperated Concepts</string>
+    <string name="git_repository">Git Repository</string>
+    <string name="due_date">Due Date</string>
+    <string name="description">Description</string>
+    <string name="comma_separated_task_list">Comma separated task list</string>
+    <string name="week_day_completed_string">Week %d Day %d is %s</string>
 </resources>

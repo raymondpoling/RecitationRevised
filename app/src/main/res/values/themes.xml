@@ -13,4 +13,23 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+
+    <style name="github_parent_style">
+        <item name="color">@color/black</item>
+    </style>
+    <style name="github_recent" parent="github_parent_style">
+        <item name="backgroundColor">#8BC34A</item>
+    </style>
+    <style name="github_not_found" parent="github_parent_style">
+        <item name="backgroundColor">#F44336</item>
+    </style>
+    <style name="github_not_recent" parent="github_parent_style">
+        <item name="backgroundColor">#F44336</item>
+        <item name="color">@color/white</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+    <style name="github_duedate_past" parent="github_parent_style">
+        <item name="color">@color/white</item>
+    </style>
 </resources>

@@ -6,30 +6,30 @@ import androidx.room.Relation;
 
 import java.util.List;
 
-public class HomeWork {
+public class Homework {
 
     @Embedded
-    private HomeWorkDetails homeWorkDetails;
+    private HomeworkDetails homeworkDetails;
 
     @Relation(entity = Task.class, parentColumn = "homework_id", entityColumn = "homework_key")
     private List<Task> taskList;
 
-    public HomeWork(HomeWorkDetails homeWorkDetails) {
-        this.homeWorkDetails = homeWorkDetails;
+    public Homework(HomeworkDetails homeworkDetails) {
+        this.homeworkDetails = homeworkDetails;
     }
 
     @Ignore
-    public HomeWork(HomeWorkDetails homeWorkDetails, List<Task> taskList) {
-        this.homeWorkDetails = homeWorkDetails;
+    public Homework(HomeworkDetails homeworkDetails, List<Task> taskList) {
+        this.homeworkDetails = homeworkDetails;
         this.taskList = taskList;
     }
 
-    public HomeWorkDetails getHomeWorkDetails() {
-        return homeWorkDetails;
+    public HomeworkDetails getHomeworkDetails() {
+        return homeworkDetails;
     }
 
-    public void setHomeWorkDetails(HomeWorkDetails homeWorkDetails) {
-        this.homeWorkDetails = homeWorkDetails;
+    public void setHomeworkDetails(HomeworkDetails homeworkDetails) {
+        this.homeworkDetails = homeworkDetails;
     }
 
     public List<Task> getTaskList() {
@@ -42,7 +42,7 @@ public class HomeWork {
 
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(homeWorkDetails).append('\n');
+        sb.append(homeworkDetails).append('\n');
         for(Task t: taskList) {
             sb.append(t.toString()).append('\n');
         }

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.AddHomeworkActivity">
+
+    <EditText
+        android:id="@+id/week_edittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:maxLines="1"
+        android:hint="@string/week"
+        android:imeOptions="actionNext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/day_edittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:maxLines="1"
+        android:hint="@string/day"
+        android:imeOptions="actionNext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/week_edittext"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/subject_edittext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:maxLines="1"
+        android:hint="@string/subject"
+        android:imeOptions="actionNext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/week_edittext" />
+
+    <EditText
+        android:id="@+id/concepts_edittext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:maxLines="1"
+        android:imeOptions="actionNext"
+        android:hint="@string/comma_seperated_concepts"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subject_edittext" />
+
+    <EditText
+        android:id="@+id/git_repository_edittext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:maxLines="1"
+        android:imeOptions="actionNext"
+        android:hint="@string/git_repository"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/concepts_edittext" />
+
+    <EditText
+        android:id="@+id/description_edittext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:maxLines="3"
+        android:imeOptions="actionNext"
+        android:hint="@string/description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/git_repository_edittext" />
+
+    <EditText
+        android:id="@+id/tasks_edittext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:imeOptions="actionNext"
+        android:hint="@string/comma_separated_task_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/description_edittext" />
+
+    <CalendarView
+        android:id="@+id/due_date_calendarview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="date"
+        android:hint="@string/due_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tasks_edittext" />
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/add_new_homework"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

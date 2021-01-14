@@ -6,13 +6,46 @@
     android:layout_height="match_parent"
     tools:context=".view.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <fragment
+        android:id="@+id/homework_list_fragment"
+        android:name="org.mousehole.americanairline.recitationrevised.view.HomeworkListFragment"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_weight=".1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/details_fragment"/>
+
+    <fragment
+        android:id="@+id/details_fragment"
+        android:name="org.mousehole.americanairline.recitationrevised.view.HomeworkDetailsFragment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/homework_list_fragment"
+        app:layout_constraintBottom_toTopOf="@id/tasks_fragment"/>
+
+    <fragment
+        android:id="@+id/tasks_fragment"
+        android:name="org.mousehole.americanairline.recitationrevised.view.TaskFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHorizontal_weight=".6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/details_fragment"
+        app:layout_constraintBottom_toTopOf="@id/add_button"/>
+
+<Button
+    android:id="@+id/add_button"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="Add New Homework"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
